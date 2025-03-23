@@ -132,48 +132,106 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.support-content h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.contact-card {
-    padding: 2rem;
+/* Help sections */
+.help-section {
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.help-section h2 {
+    padding: 1rem;
     background-color: #f8f9fa;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.help-section h2:hover {
+    background-color: #e9ecef;
+}
+
+.help-section h2::after {
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.help-section h2.expanded::after {
+    transform: rotate(180deg);
+}
+
+.help-items {
+    padding: 1rem;
+    display: none;
+}
+
+.help-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.help-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.help-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.help-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Contact section */
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
     border-radius: 8px;
     text-align: center;
+    margin-top: 3rem;
+}
+
+.contact-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    margin-bottom: 1rem;
 }
 
 .contact-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #FFC700;
+    color: #2c3e50;
     text-decoration: none;
     border-radius: 4px;
-    margin-top: 1rem;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #2980b9;
-}
-
-.faq {
-    margin-top: 3rem;
-}
-
-.faq-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-}
-
-.faq-item h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+    background-color: #e6b300;
 }
 
 /* Footer */
@@ -204,5 +262,13 @@ footer {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .help-section h2 {
+        padding: 0.8rem;
+    }
+
+    .help-items {
+        padding: 0.8rem;
     }
 } 

@@ -19,35 +19,93 @@
     </header>
 
     <main class="support-content">
-        <h1>Support</h1>
-        <section class="contact-info">
-            <h2>Need Help?</h2>
-            <p>We're here to help you with any questions or concerns you may have.</p>
-            
-            <div class="contact-methods">
-                <div class="contact-card">
-                    <h3>Email Support</h3>
-                    <p>For general inquiries and support:</p>
-                    <a href="mailto:ddingdong.co@gmail.com" class="contact-button">Email Us</a>
+        <h1>Help Center</h1>
+
+        <section class="help-section">
+            <h2>Getting Started</h2>
+            <div class="help-items">
+                <div class="help-item">
+                    <h3>How do I find restaurants?</h3>
+                    <p>Press the home button to see nearby restaurants. You can filter by cuisine type using the buttons at the top of the screen. Use the filter button on the right to find specific promotions.</p>
+                </div>
+                <div class="help-item">
+                    <h3>How do I claim a promotion?</h3>
+                    <p>Tap on a restaurant pin on the map, view their promotions, and tap 'Claim' on the coupons you want. The coupon will be saved in 'My Coupons' section.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Where are my coupons?</h3>
+                    <p>Access your claimed coupons in the Profile tab under 'My Coupons'. Here you'll find all your active, expired, and redeemed coupons.</p>
                 </div>
             </div>
         </section>
 
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>How do I get started with DDingDong?</h3>
-                <p>Download the app, create an account, and start exploring nearby promotions!</p>
+        <section class="help-section">
+            <h2>Location Services</h2>
+            <div class="help-items">
+                <div class="help-item">
+                    <h3>Why does DDingDong need my location?</h3>
+                    <p>We use your location to show you nearby restaurants and their promotions. This helps you find the best deals in your area.</p>
+                </div>
+                <div class="help-item">
+                    <h3>How do I enable location services?</h3>
+                    <p>Go to your device's Settings > Privacy > Location Services > DDingDong, and select 'While Using' or 'Always Allow'.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3>How do I manage my restaurant?</h3>
-                <p>Sign up as a restaurant manager, verify your account, and you'll have access to our management dashboard.</p>
+        </section>
+
+        <section class="help-section">
+            <h2>Promotions & Coupons</h2>
+            <div class="help-items">
+                <div class="help-item">
+                    <h3>What types of promotions are available?</h3>
+                    <p>We offer percentage discounts, fixed amount discounts, free items, and buy-one-get-one deals. Each restaurant can customize their promotions.</p>
+                </div>
+                <div class="help-item">
+                    <h3>How do I use my coupon?</h3>
+                    <p>Show your unique coupon code to the restaurant staff when paying. Each code can only be used once and must be used before the expiration date.</p>
+                </div>
+                <div class="help-item">
+                    <h3>What if my coupon doesn't work?</h3>
+                    <p>Ensure the coupon hasn't expired and hasn't been used before. If issues persist, contact the restaurant or reach out to our support team.</p>
+                </div>
             </div>
+        </section>
+
+        <section class="help-section">
+            <h2>Account Management</h2>
+            <div class="help-items">
+                <div class="help-item">
+                    <h3>How do I update my preferences?</h3>
+                    <p>Go to Profile > Settings to update your cuisine preferences, notification settings, and personal information.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Can I delete my account?</h3>
+                    <p>Yes, you can permanently delete your account by going to Profile > Settings and scrolling to the bottom. Tap 'Delete Account' and confirm your choice. Please note that this action cannot be undone and all your data, including claimed coupons and preferences, will be permanently removed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Need More Help?</h2>
+            <p>Contact our support team:</p>
+            <a href="mailto:ddingdong.co@gmail.com" class="contact-button">Email: ddingdong.co@gmail.com</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 DDingDong. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Add JavaScript for expandable sections
+        document.querySelectorAll('.help-section h2').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                const items = section.querySelector('.help-items');
+                items.style.display = items.style.display === 'none' ? 'block' : 'none';
+                header.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html> 
